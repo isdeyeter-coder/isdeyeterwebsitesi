@@ -1,0 +1,11 @@
+name = "isdeyeterwebsitesi"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = "npm run build"
+upload = { format = "modules", dir = "./dist" }
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
